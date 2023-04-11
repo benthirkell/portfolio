@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@-webkit-keyframes blink {
+    0% {opacity: 0%}
+    40% {opacity: 0%;}
+    50% {opacity: 100%}
+    90% {opacity: 100%;}
+    100% {opacity: 0%;}
+    }
+:root {
+    --white: #F1F1F1;
+    --dark: #0D0D0D;
+    --accent: #397545;
+    --accent2: #52a864;
+    --light: #e4f0e9;
+    }
+/* -------------------- GLOBAL STYLES ------------------- */
+* {
+    /* box-shadow: 0 0 2px magenta; */
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    }
+.background {
+    height: 100vh;
+    width: 100%;
+    background: url("images/plant.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    z-index: -5;
+    filter: grayscale(50%) saturate(99%) contrast(90%);
+    }
+h4 {
+    color: var(--light);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: min(40px, 16vw);
+    font-weight: 600;
+    margin: 100px 0 50px 0;
+    position: relative;
+    padding-bottom: 8px;
+    }    
+h4::before,h4::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--accent);
+    left: 0;
+    bottom: 0;
+    }
+h4::after{
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+/* -------------------- NAVIGATION BAR ------------------ */
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 998;
+    transition: all 0.3s ease;
+    font-family: 'Ubuntu', sans-serif;
+    }
+nav.sticky{
+    background: var(--accent);
+    padding: 13px 0;
+    }
+nav .navbar{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    }
+nav .navbar .logo a{
+    font-weight: 500;
+    font-size: 35px;
+    color: var(--dark);
+    }
+nav.sticky .navbar .logo a{
+    color: var(--light);
+    }
+nav .navbar .menu{
+    display: flex;
+    position: relative;
+    }
+nav .navbar .menu li{
+    list-style: none;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    }
+nav .navbar .menu i:hover{
+    }
+.navbar .menu a{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--light);
+    padding: 6px 0;
+    transition: all 0.3s ease;
+    }
+.navbar .menu a:hover{
+    color: var(--accent2);
+    }
+nav.sticky .menu a{
+    color: var(--light);
+    }
+nav.sticky .menu a:hover{
+    color: var(--accent2);
+    }
+.navbar .media-icons a{
+    color: var(--light);
+    font-size: 30px;
+    margin: 0 6px;
+    transition: all 0.3s ease;
+    }
+.navbar .media-icons a:hover{
+    color: var(--accent2);
+    }
+nav.sticky .media-icons a{
+    color: var(--light);
+    }
+nav.sticky .media-icons a:hover{
+    color: var(--accent2);
+    }
+/* -------------------- HERO SECTION -------------------- */
+#hero {
+    height: 100vh;
+    margin: auto;
+    margin-left: max(calc( ( 100vw - 500px ) / 4 ), 40px);
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+#hero h1 {
+    color: var(--light);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: min( 75px, calc( 100vw / 7.5 ) );
+    font-weight: 600;
+    margin-left: -3px;
+    }
+#hero h2 {
+    color: var(--accent2);
+    font-family: "Monaco", monospace;
+    font-size: min( 50px, calc( 100vw / 11.25 ) );
+    font-weight: 400;
+    margin: 5px 0;
+    }
+#hero h3 {
+    color: var(--light);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: min( 24px, calc( 100vw / 23.4375) );
+    font-weight: 400;
+    margin: 5px 0;
+    }
+#hero .blink {
+    -webkit-animation: blink 1.2s infinite;
+    }
+/* -------------------- ABOUT SECTION ------------------- */
+#about {
+    background: var(--dark);
+    min-height: 100vh;
+    width: 100%;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+#about .content {
+    width: min( 90% , 1000px );    
+    /* flex */
+    display: flex;
+    flex-wrap: wrap;
+    }
+#about .content .left {
+    padding: 20px;
+    width: calc(50% - 40px);
+    /* flex */
+    display: flex;
+    justify-content: flex-end;
+    }
+#about .content .left img {
+    border-radius: 50%;
+    filter: grayscale(100%);
+    height: 400px;
+    object-fit: cover;
+    width: 400px;
+    }
+#about .content .right {
+    padding: 20px;
+    width: calc(50% - 40px);
+    }
+#about .content .right p {
+    color: var(--light);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: justify;
+    }
+#about .content .right a {}
+#about .content .right a button {
+    background: var(--accent2);
+    border: 2px solid transparent;
+    border-radius: 25px;
+    color: var(--dark);
+    cursor: pointer;
+    font-family: "Rubik", "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    height: 50px;
+    margin: 20px 0 60px 0;
+    max-width: 50px;
+    outline: none;
+    overflow:hidden;
+    padding: 8px 15px 8px 11px;
+    width: auto;
+    white-space: nowrap;
+    /* flex */
+    display: inline-flex;
+    align-items: center;
+    /* transitions */
+    transition: 
+        background-color 0.5s ease-out,
+        border-color 0.5s ease-out,
+        color 0.5s ease-out,
+        max-width 0.5s ease,
+        padding-left 0.3s ease-out;
+    }
+#about .content .right a button:hover{
+    background-color: var(--dark);
+    border-color: var(--accent2);
+    color: var(--accent2);
+    max-width: 500px;
+    padding-left: 16px;
+    }
+/* -------------------- PROJECTS SECTION ---------------- */
+#projects {
+    width: 100%;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+#projects .grid {
+    margin: 0 0 150px 0;
+    width: min(calc( 440px * 2 ) , 92vw);
+    /* flex */
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+#projects .grid .item {    
+    height: min(390px , 78vw);
+    margin: 20px;
+    width: min(390px , 78vw);
+    /* flex */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+#projects .grid .item img {
+    width: 100%;
+    border: var(--light) 5px solid;
+    }
+#projects .grid .item .overlay {
+    background-color: var(--dark);   
+    border: var(--light) 5px solid;
+    cursor: default;
+    opacity: 0%;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    /* flex */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+#projects .grid .item:hover .overlay {
+    opacity: 80%;
+    }
+#projects .grid .item .overlay p {
+    color: var(--light);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    text-align: justify;
+    margin: 20px;
+    }
+#projects .grid .item .overlay button {
+    background-color: var(--accent);
+    border: none;
+    border-radius: 5px;
+    color: var(--light);
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 22px;
+    margin-bottom: 20px;
+    }
+#projects .grid .item .overlay button:hover {
+    background-color: var(--accent2);
+    cursor: pointer;
+    }
+#projects .grid .item .overlay button:active {
+    background-color: var(--accent);
+    cursor: pointer;
+    }#projects .grid .item {}
+#projects * {
+    transition: 
+        opacity 0.3s ease,
+        background-color 0.3s ease;
+}
+/* -------------------- SKILLS SECTION ------------------ */
+#skills {
+    background: var(--dark);
+    width: 100%;
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+#skills .grid {
+    margin: 0 0 100px 0;
+    width: min(660px, 100vw);
+    /* flex */
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    }
+#skills .grid .item {
+    width: calc( 100% / 3 );
+    /* flex */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+#skills .grid:hover .item {
+    filter: saturate(80%);
+    }
+#skills .grid .item h5 {
+    color: var(--light);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: -30px;
+    } 
+#skills .grid .item img {
+    border-radius: 14px;
+    filter: brightness(80%);
+    height: 120px;
+    margin: 50px;
+    width: 120px;
+    }
+#skills .grid .item:hover img {
+    filter: none;
+    transform: scale(110%);
+    }
+#skills * {
+    transition:
+        transform ease-out .3s,
+        filter ease-out .3s;
+    }
+/* -------------------- RESPONSIVE ---------------------- */
+@media only screen and (max-width: 960px) {
+    nav .navbar .logo a{
+        font-size: 20px;
+        }
+    #about .content .left {
+        padding: 20px;
+        width: 100%;
+        justify-content: center;
+        }
+    #about .content .right {
+        padding: 20px;
+        width: 100%;
+        }
+    }
+@media only screen and (max-width: 660px) {
+    #skills .grid .item {
+        width: calc( 100% / 2 );
+        }
+    }
+@media only screen and (max-width: 500px) {
+    nav .navbar .logo a {
+        font-size: 0px;
+        }
+    .navbar .menu a {
+        font-size: calc( 100vw / 25 );
+        }
+    nav .navbar .menu li {
+        list-style: none;
+        margin: 0 8px;
+        }
+    #about .content .left img {
+        height: calc( 100vw * 0.72 );
+        width: calc( 100vw * 0.72 );
+        }
+    #projects .grid .item .overlay p {
+        font-size: min(22px , 4.4vw);
+        }
+    #projects .grid .item .overlay button {
+        font-size: min(22px , 4.4vw);
+        padding: min(10px,2vw) min(20px,4vw);
+        }
+    #skills .grid .item h5 {
+        font-size: calc(100vw/ 20 );
+    }
+    #skills .grid .item img {
+        height: calc(100vw * 120 / 500);
+        width: calc(100vw * 120 / 500);
+        margin: max(calc(100vw / 10) , 35px);
+    }
+}
+@media only screen and (max-width: 440px) {
+    #skills .grid .item {
+        width: calc(100vw / 2) ;
+        }
+
+    }

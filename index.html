@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo"><a href="#">Portfolio.</a></div>
+            <ul class="menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+            </ul>
+            <div class="media-icons">
+                <a href="mailto:ben.thirkell@gmail.com"><i class="fa-solid fa-square-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/benthirkell/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/benthirkell"><i class="fa-brands fa-square-github"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background" ></div>
+    
+    <section id="hero">
+        <div>
+            <h1>Ben Thirkell</h1>
+            <h2>Web Developer<span class="blink">|</span></h2>
+            <h3>Based in Melbourne</h3>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h4>About</h4>
+
+        <div class="content">
+            <div class="left">
+                <img src="images/about.jpg">
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ab ipsa repellat nihil facere, eum qui maiores eligendi, quis aliquam porro exercitationem distinctio cum debitis voluptas corrupti labore dolorum temporibus? A sunt sed sapiente nulla tenetur iure adipisci dolores modi eaque quisquam provident, beatae error, ad rem quos! Reprehenderit aliquid libero corporis quam fugit, neque, cum pariatur cupiditate odio quos sequi. Doloremque distinctio expedita voluptatum ratione inventore atque corrupti cumque non laboriosam dignissimos mollitia eum provident nam voluptate, est aspernatur?</p>
+                <a href="BenThirkellResume.pdf" download="BenThirkellResume.docx">
+                    <button>
+                        <i class="fas fa-download"></i>
+                        &nbsp; Resumé
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section> 
+
+    <section id="projects">
+        <h4>Projects</h4>
+        <div class="grid">
+            <div class="item">
+                <img src="images/todo.png">
+                <div class="overlay">
+                    <p>
+                        A minimal to do list made with Javascript. It includes the ability
+                        to add items to the list, delete items from the list and mark items as complete.
+                        The page has a responsive design for use on desktop or mobile devices.
+                    </p>
+                    <a href="https://benthirkell.github.io/todolist/" target="_blank" rel="noopener noreferrer">
+                        <button>Live Page</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/band.png">
+                
+                <div class="overlay">
+                    <p>
+                        A name generator for bands and artists in the style of synthwave. It generates 2-word names
+                        from a pool of words using Javascript. Used some creative CSS to give the page a very
+                        retro 80s feel.
+                    </p>
+                    <a href="https://benthirkell.github.io/bandnamegenerator/" target="_blank" rel="noopener noreferrer">
+                        <button>Live Page</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/gridmenu.png">
+                
+                <div class="overlay">
+                    <p>To Do List dolor sit amet, consectetur adipis sicing elit. Iste perfer rendis magnam similique neces sitatibus, possimus volsfsup tatum harum doloremque volup tatum in animi possimus quas fuga debitis, repellat iure verit tatis.</p>
+                    <a href="https://benthirkell.github.io/gridmenu/" target="_blank" rel="noopener noreferrer">
+                        <button>Live Page</button>
+                    </a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/rps.png">
+                
+                <div class="overlay">
+                    <p>To Do List dolor sit amet, consectetur adipis sicing elit. Iste perfer rendis magnam similique neces sitatibus, possimus volsfsup tatum harum doloremque volup tatum in animi possimus quas fuga debitis, repellat iure verit tatis.</p>
+                    <a href="https://benthirkell.github.io/rockpaperscissors/" target="_blank" rel="noopener noreferrer">
+                        <button>Live Page</button>
+                    </a>
+                </div>
+            </div>        
+        </div>
+    </section>
+
+    <section id="skills">
+        <h4>Skills</h4>
+        <!-- <img src="images/computer.png" class="float"> -->
+        <div class="grid">
+            <div class="item"><h5>HTML</h5><img src="images/html5.png"></div>
+            <div class="item"><h5>CSS</h5><img src="images/css3.png"></div>
+            <div class="item"><h5>Javascript</h5><img src="images/js.png"></div>
+            <div class="item"><h5>GitHub</h5><img src="images/github.png"></div>
+            <div class="item"><h5>Ableton Live</h5><img src="images/ableton.png"></div>
+            <div class="item"><h5>Blender</h5><img src="images/blender.png"></div>
+            <div class="item"><h5>Photoshop</h5><img src="images/photoshop.png"></div>
+            <div class="item"><h5>Premiere Pro</h5><img src="images/premiere.png"></div>
+            <div class="item"><h5>Animate</h5><img src="images/animate.png"></div>
+        </div>
+    </section> 
+</body>
+</html>
