@@ -185,7 +185,7 @@ nav.sticky .media-icons a:hover{
     }
 #about .content .left img {
     border-radius: 50%;
-    filter: grayscale(100%);
+    filter: grayscale(10%);
     height: 400px;
     object-fit: cover;
     width: 400px;
@@ -198,7 +198,8 @@ nav.sticky .media-icons a:hover{
     color: var(--light);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
-    text-align: justify;
+    /* text-align: justify; */
+    line-height: 1.6;
     }
 #about .content .right a {}
 #about .content .right a button {
@@ -291,6 +292,7 @@ nav.sticky .media-icons a:hover{
     font-size: 22px;
     text-align: justify;
     margin: 20px;
+    line-height: 32px;
     }
 #projects .grid .item .overlay button {
     background-color: var(--accent);
@@ -301,7 +303,7 @@ nav.sticky .media-icons a:hover{
     text-align: center;
     display: inline-block;
     font-size: 22px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     }
 #projects .grid .item .overlay button:hover {
     background-color: var(--accent2);
@@ -327,12 +329,13 @@ nav.sticky .media-icons a:hover{
     }
 #skills .grid {
     margin: 0 0 100px 0;
-    width: min(660px, 100vw);
+    width: min(660px, 100vw - 17px);
     /* flex */
     align-content: flex-start;
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     }
 #skills .grid .item {
     width: calc( 100% / 3 );
@@ -385,7 +388,7 @@ nav.sticky .media-icons a:hover{
     }
 @media only screen and (max-width: 660px) {
     #skills .grid .item {
-        width: calc( 100% / 2 );
+        width: 50%;
         }
     }
 @media only screen and (max-width: 500px) {
@@ -405,10 +408,12 @@ nav.sticky .media-icons a:hover{
         }
     #projects .grid .item .overlay p {
         font-size: min(22px , 4.4vw);
+        line-height: 6.4vw;
         }
     #projects .grid .item .overlay button {
         font-size: min(22px , 4.4vw);
         padding: min(10px,2vw) min(20px,4vw);
+        margin-bottom: max(10vw,10px);
         }
     #skills .grid .item h5 {
         font-size: calc(100vw/ 20 );
@@ -421,7 +426,7 @@ nav.sticky .media-icons a:hover{
 }
 @media only screen and (max-width: 440px) {
     #skills .grid .item {
-        width: calc(100vw / 2) ;
+        width: calc( ( 100vw - 17px ) / 2) ;
         }
 
     }
