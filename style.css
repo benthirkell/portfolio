@@ -82,9 +82,11 @@ nav .navbar .logo a{
     font-weight: 500;
     font-size: 35px;
     color: var(--dark);
+    opacity: 0;
     }
 nav.sticky .navbar .logo a{
     color: var(--light);
+    opacity: 1;
     }
 nav .navbar .menu{
     display: flex;
